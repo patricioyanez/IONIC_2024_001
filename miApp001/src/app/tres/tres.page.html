@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tres: inputs</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Información solicitada</h1>
+
+  <label>Nombre</label>
+  <ion-input type="text" placeholder="Ej: Juan"></ion-input>
+  
+  <ion-input type="text" placeholder="Ej: Díaz" label="Apellido"></ion-input>
+  <ion-input type="number" placeholder="Ej: 34" label="Edad"></ion-input>
+  <ion-input type="email" placeholder="Ej: mail@correo.cl" label="correo"></ion-input>
+  <ion-input type="email" placeholder="Ej: mail@correo.cl" 
+    label="correo2"
+    helperText="Ingrese su correo valido"
+    errorText="El formato del correo no es válido"
+    ngModel email
+  ></ion-input>  
+
+  <ion-input type="password" placeholder="*****" 
+              label="Clave"
+              labelPlacement="floating"
+              ></ion-input>
+
+  <ion-input type="password" placeholder="*****" 
+              label="Clave 2"
+              labelPlacement="fixes"
+              ></ion-input>
+
+  <ion-input type="text" placeholder="Carrera" fill="solid" label="Carrera"></ion-input>
+  <ion-input type="text" placeholder="Sede" fill="outline" label="Sede"></ion-input>
+  <ion-input type="text" placeholder="Comuna" fill="outline" label="Comuna" color="success"></ion-input>
+
+  <ion-input type="text" label="observaciones" [counter]="true" maxlength="30"></ion-input>
+  <ion-input type="text" label="Comentario" [clearInput]="true"></ion-input>
+
+</ion-content>
