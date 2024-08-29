@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Seis</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">Nombre</ion-col>
+      <ion-col size="6">{{ nombre }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">Edad</ion-col>
+      <ion-col size="6">{{ edad }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Mensaje</ion-col>
+      <ion-col size="9">{{ mensaje }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Grilla y atributos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
