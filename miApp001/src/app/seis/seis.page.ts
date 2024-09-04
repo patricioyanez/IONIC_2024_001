@@ -11,6 +11,13 @@ export class SeisPage implements OnInit {
   edad : number;
   mensaje : string = "Es usuario premium"
 
+  asignaturas = [
+    {nombre: "PGY4121", nota: 39.5},
+    {nombre: "PGY2121", nota: 45},
+    {nombre: "mdy3101", nota: 50},
+  ]
+
+
   constructor() {
     this.nombre = "Ana Diaz";
     this.edad = 28;

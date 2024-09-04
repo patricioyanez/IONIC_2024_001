@@ -48,6 +48,16 @@
   </ion-row>
   </ion-grid>
 
+<br><br><br>
+<h1>Listado de asignaturas</h1>
+<ion-list>
+  <ion-item *ngFor="let asignatura of asignaturas">
+    <ion-label>{{asignatura.nombre | uppercase }}</ion-label> <!-- lowercase-->
+  </ion-item>
+
+
+</ion-list>
+
 </ion-content>
 
 
