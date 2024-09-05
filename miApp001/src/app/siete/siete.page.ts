@@ -38,5 +38,6 @@ export class SietePage implements OnInit {
   }
     // Ejercicio 9:
     // Crear las operaciones aritmeticas *,/ y -, 
+    // con diferentes iconos y colores,
     // validando los numero enviado mensaje adecuado
 }
