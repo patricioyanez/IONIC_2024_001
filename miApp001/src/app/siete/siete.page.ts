@@ -40,4 +40,9 @@ export class SietePage implements OnInit {
     // Crear las operaciones aritmeticas *,/ y -, 
     // con diferentes iconos y colores,
     // validando los numero enviado mensaje adecuado
+
+  // Ejercicio 10:
+  // crear una nueva pagina que permita calculador el promedio de 3 notas,
+  // mostrar si aprobó o no, según resultado obtenido.
+  // usar alert si reprueba y toast si aprueba.
 }
