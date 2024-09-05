@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>siete</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<ion-text color="primary">
+  <h1>Directiva Unidireccional</h1>
+  <input type="text" [ngModel]="nombre">
+</ion-text>
+<ion-text color="primary">
+  {{nombre}}
+</ion-text>
+<br><br>
+<ion-text color="success">
+  <h1>Directiva BiDireccional</h1>
+  <input type="text" [(ngModel)]="primerApellido">
+</ion-text>
+<ion-text color="success">
+  {{primerApellido}}
+</ion-text>
+
+<h1>Ejercicio: Sumar y restar 2 numeros</h1>
+<!-- agregar boton, funcion y atributos  -->
+<h2>Calculadora</h2>
+<ion-item>
+  <ion-label>Numero 1:</ion-label><input type="number" [(ngModel)]="n1">
+</ion-item>
+<ion-item>
+  <ion-label>Numero 2:</ion-label><input type="number" [(ngModel)]="n2">
+</ion-item>
+<ion-button (click)="sumar()">
+  <ion-icon slot="end" name="add"></ion-icon>Sumar
+</ion-button>
+<ion-item>
+  <ion-label>Resultado: {{ resultado }}</ion-label>
+</ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Toast</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
