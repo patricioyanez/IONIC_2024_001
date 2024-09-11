@@ -35,8 +35,15 @@
   <ion-label>Numero 2:</ion-label><input type="number" [(ngModel)]="n2">
 </ion-item>
 <ion-button (click)="sumar()">
-  <ion-icon slot="end" name="add"></ion-icon>Sumar
+  <ion-icon slot="icon-only" name="add"></ion-icon>
 </ion-button>
+<ion-button (click)="restar()">
+  <ion-icon slot="icon-only" name="remove"></ion-icon>
+</ion-button>
+<ion-button (click)="multiplicar()">
+  <ion-icon slot="icon-only" name="close"></ion-icon>
+</ion-button>
+<ion-button (click)="dividir()">÷</ion-button>
 <ion-button (click)="limpiar()" color="medium">
   <ion-icon slot="end" name="trash"></ion-icon>Limpiar
 </ion-button>
