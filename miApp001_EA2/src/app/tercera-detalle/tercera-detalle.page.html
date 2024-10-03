@@ -1,13 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>terceraDetalle</ion-title>
+    <ion-title>Datos de la persona</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tercera"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">terceraDetalle</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-card>
+  <img [src]="persona.foto" />
+  <ion-card-header>
+    <ion-card-subtitle>id: {{persona.id}}. Nombre: {{persona.nombre}}</ion-card-subtitle>
+    <ion-card-title>edad: {{persona.edad}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    un chiquillo/a
+  </ion-card-content>
+</ion-card>
 </ion-content>

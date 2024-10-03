@@ -35,6 +35,12 @@ export class TerceraDetallePage implements OnInit {
   ngOnInit() {
     // ejercicio 16: capturar el valor del parametro y
     // obtener la persona según id
+    this.activatedRoute.paramMap.subscribe( x => {
+      const id = Number(x.get("id"));
+      this.persona = this.personas.find( xx => xx.id == id);
+    })
+
+    console.log(this.persona);
   }
 
 }
