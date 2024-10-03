@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tercera</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1 *ngIf="!personas" color="danger">No hay registro</h1>
+
+  <ion-list>
+    <ion-item *ngFor="let persona of personas">
+      <ion-avatar slot="start">
+        <img [src]="persona.foto" />
+      </ion-avatar>
+      <ion-label>{{persona.nombre}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+<!-- 
+  Ejercicio 16: crear pagina terceraDetalle y mostrar la información
+  de la persona seleccionada en esta pagina
+-->
+</ion-content>
