@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cuarta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-label>id</ion-label>
+  <ion-input type="number" placeholder="indiceque su id" [(ngModel)]="id"></ion-input>
+  <br>
+  
+  <ion-label>Nombre</ion-label>
+  <ion-input type="text" placeholder="indique su nombre" [(ngModel)]="nombre"></ion-input>
+
+  <ion-button (click)="guardar()">
+    <ion-icon slot="start" name="add"></ion-icon>
+    guardar
+  </ion-button>
+
+</ion-content>
