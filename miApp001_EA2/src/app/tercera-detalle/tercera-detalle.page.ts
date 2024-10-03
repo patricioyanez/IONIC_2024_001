@@ -42,5 +42,6 @@ export class TerceraDetallePage implements OnInit {
 
     console.log(this.persona);
   }
-
+// ejercicio 17: agregar 2 botones x o ❤ y enviar mensaje con
+// toast y alertController
 }
