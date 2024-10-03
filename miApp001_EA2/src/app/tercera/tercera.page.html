@@ -8,7 +8,7 @@
   <h1 *ngIf="!personas" color="danger">No hay registro</h1>
 
   <ion-list>
-    <ion-item *ngFor="let persona of personas">
+    <ion-item *ngFor="let persona of personas" [routerLink]="['/tercera-detalle/' + persona.id]">
       <ion-avatar slot="start">
         <img [src]="persona.foto" />
       </ion-avatar>
