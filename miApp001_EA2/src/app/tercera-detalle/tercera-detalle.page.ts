@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tercera-detalle',
@@ -30,7 +31,10 @@ export class TerceraDetallePage implements OnInit {
     }
   ]
   persona: any;
-  constructor(private activatedRoute:ActivatedRoute) { }
+  constructor(private activatedRoute:ActivatedRoute,
+              private alertController: AlertController,
+              private toastController: ToastController
+              ) { }
 
   ngOnInit() {
     // ejercicio 16: capturar el valor del parametro y
@@ -44,4 +48,26 @@ export class TerceraDetallePage implements OnInit {
   }
 // ejercicio 17: agregar 2 botones x o ❤ y enviar mensaje con
 // toast y alertController
+  async si()
+  {
+    const alert = await this.alertController.create({
+      header: 'Atención',
+      subHeader: 'Mensaje importante',
+      message: 'Te agrado la persona de la imagen',
+      buttons: ['Aceptar']
+    });
+    await alert.present();
+  }
+  async no()
+  {
+    const toast = await this.toastController.create({
+      header: 'Atención',
+      message: 'NO Te agrado la persona de la imagen',
+      icon: 'close-circle-outline',
+      duration: 2000,
+      color: 'danger',
+      buttons: ['Aceptar']
+    });
+    await toast.present();
+  }
 }
