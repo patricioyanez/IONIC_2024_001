@@ -9,7 +9,7 @@ export class CrudService {
 
   async guardar(id:string, valor: any)
   {
-    localStorage.setItem(id, valor);
+    localStorage.setItem(id, valor );
   }
   async leer(id:string)
   {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from './crud.service';
 
 @Component({
   selector: 'app-quinta',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuintaPage implements OnInit {
   persona:any=[];
-  constructor() { }
+  constructor(private crudService:CrudService) { }
 
   ngOnInit() {
   }
-
+  guardar()
+  {
+    // validar si estan todos los datos obligatorios.
+    this.crudService.guardar(this.persona.rut, this.persona.nombre);
+  }
 }
