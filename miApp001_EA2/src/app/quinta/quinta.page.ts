@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quinta.page.scss'],
 })
 export class QuintaPage implements OnInit {
-
+  persona:any=[];
   constructor() { }
 
   ngOnInit() {
