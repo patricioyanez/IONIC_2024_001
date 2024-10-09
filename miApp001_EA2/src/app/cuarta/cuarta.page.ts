@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 
 // instalar: npm install @ionic/storage-angular
 //import { Storage } from '@ionic/storage-angular';
@@ -18,13 +18,39 @@ export class CuartaPage implements OnInit {
   id:string = '';
   nombre:string = '';
   //private storage: Storage
-  constructor() { }
+  constructor(private alertController:AlertController,
+              private toastController:ToastController
+  ) { }
 
   ngOnInit() {
   }
-  guardar()
-  {
-    localStorage.setItem(this.id, this.nombre);
+  async guardar()
+  {// validar
+
+    if(this.id == "" || this.nombre == "")
+    {
+      const alert = await this.alertController.create({
+        header: 'Error',
+        subHeader: 'Valor Id o nombre',
+        message: 'El valor del id o del nombre no es válido',
+        buttons: ['Aceptar']
+      });
+      await alert.present();
+    }
+    else
+    {
+      localStorage.setItem(this.id, this.nombre);
 //    this.storage.setItem(this.id, this.nombre);
+      const toast = await this.toastController.create({
+        header: 'Información',
+        message: 'Los datos fueron guardados',
+        icon: 'checkmark-circle-outline',
+        duration: 2000,
+        color: 'success',
+        position: 'middle',
+        buttons: ['Aceptar']
+      });
+      await toast.present();
+    }
   }
 }
