@@ -16,6 +16,6 @@ export class QuintaPage implements OnInit {
   {
     // validar si estan todos los datos obligatorios.
     console.log(this.persona);
-    this.crudService.guardar(this.persona.rut, this.persona.nombre);
+    this.crudService.guardar(this.persona.rut, this.persona);
   }
 }
