@@ -13,7 +13,10 @@ export class CrudService {
   }
   async leer(id:string)
   {
-    return localStorage.getItem(id);
+    let temp =  localStorage.getItem(id);
+    if(temp != null)
+      return JSON.parse(temp);
+    return null;
   }
   async eliminar(id:string)
   {
