@@ -7,9 +7,9 @@ export class CrudService {
 
   constructor() { }
 
-  async guardar(id:string, valor: any)
+  async guardar(id:string, valor: [])
   {
-    localStorage.setItem(id, valor );
+    localStorage.setItem(id, JSON.stringify({...valor}));
   }
   async leer(id:string)
   {

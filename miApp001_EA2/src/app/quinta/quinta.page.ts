@@ -14,8 +14,15 @@ export class QuintaPage implements OnInit {
   }
   guardar()
   {
-    // validar si estan todos los datos obligatorios.
-    console.log(this.persona);
+    // validar si están todos los datos obligatorios.
     this.crudService.guardar(this.persona.rut, this.persona);
+    this.limpiar();
+  }
+  limpiar()
+  {
+    this.persona = [];
+    const input = document.querySelector('ion-input');
+    if(input != null)
+      input.setFocus();
   }
 }
