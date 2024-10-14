@@ -27,7 +27,7 @@ export class CrudService {
     let listado : any = [];
     for(let i=0; i < localStorage.length; i++)
     {
-      listado[i] = localStorage.getItem("" + i);
+      listado[i] = JSON.parse(""+localStorage.getItem("" + localStorage.key(i)));
     }
     return listado;
   }
