@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class ApirestService {
 
-  constructor() { }
+  private urlBase = 'https://jsonplaceholder.typicode.com/';
+  listado : any = [];
+  constructor(private httpClient:HttpClient) { }
+  
+  getUsers()
+  {
+    const ruta = this.urlBase + 'users';
+    this.httpClient.get(ruta).subscribe((data=[])=> {this.listado=data});
+    return this.listado;
+  }
 }
