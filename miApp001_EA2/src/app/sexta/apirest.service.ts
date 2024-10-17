@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
 /**
  * importa el modulo
  * HttpClientModule en el archivo app.module.ts
@@ -13,10 +14,11 @@ export class ApirestService {
   listado : any = [];
   constructor(private httpClient:HttpClient) { }
   
-  getUsers()
+  async getUsers()
   {
     const ruta = this.urlBase + 'users';
-    this.httpClient.get(ruta).subscribe((data=[])=> {this.listado=data});
-    return this.listado;
+    //this.httpClient.get(ruta).subscribe((data=[])=> {this.listado=data});
+    return await firstValueFrom(this.httpClient.get(ruta));
+
   }
 }

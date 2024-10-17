@@ -23,5 +23,8 @@ export class SextaPage implements OnInit {
   {
     this.listado = await this.apirestService.getUsers();
   }
-
+ /*
+    Ejercicio 27: Desplegar los post del usuario seleccionado
+  */
+ 
 }
