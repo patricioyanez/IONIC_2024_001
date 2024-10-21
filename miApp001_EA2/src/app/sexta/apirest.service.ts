@@ -17,8 +17,7 @@ export class ApirestService {
   async getUsers()
   {
     const ruta = this.urlBase + 'users';
-    //this.httpClient.get(ruta).subscribe((data=[])=> {this.listado=data});
     return await firstValueFrom(this.httpClient.get(ruta));
+  }  
 
-  }
 }
