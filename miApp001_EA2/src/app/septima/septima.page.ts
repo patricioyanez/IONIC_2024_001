@@ -26,6 +26,15 @@ pc y android
 Buscar numero de compilación (hacer 7 veces clic) y
 activar modo depuración USB
 Iniciar aplicaciones (reinicar app si esta ejecutandose)
+
+JSON-SERVER
+https://www.npmjs.com/package/json-server
+
+instalar librería json-server, crear una carpeta y
+crear archivo db.json con los datos a utilizar en la aplicación
+
+
+Instalar plugin postman para probar json-server y sus rutas.
 */
 
 

@@ -1,0 +1,45 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "juan",
+      "correo": "j@mail.com",
+      "clave": "1234"
+    },
+    {
+      "id": "2",
+      "nombre": "ana",
+      "correo": "a@mail.com",
+      "clave": "1234"
+    },
+    {
+      "id": "3",
+      "nombre": "luis",
+      "correo": "l@mail.com",
+      "clave": "1234"
+    },
+    {
+      "id": "4",
+      "nombre": "adams",
+      "correo": "ad@mail.com",
+      "clave": "1234"
+    }
+  ],
+  "departamentos": [
+    {
+      "id": "1000",
+      "nombre": "Administración",
+      "habilitado": "1"
+    },
+    {
+      "id": "1010",
+      "nombre": "Finanzas",
+      "habilitado": "1"
+    },
+    {
+      "id": "1100",
+      "nombre": "Bodega",
+      "habilitado": "1"
+    }
+  ]
+}
