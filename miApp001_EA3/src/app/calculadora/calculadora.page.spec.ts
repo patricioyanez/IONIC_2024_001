@@ -28,4 +28,9 @@ describe('=== Formulario Calculadora:', () => {
     const resultado =(<HTMLInputElement>document.getElementById("resultado")).value;
     expect(resultado).toContain("9");
   }));
+
+/*
+  Crear boton para -,/ y * y aplicar pruebas e2e
+*/
+
 });
